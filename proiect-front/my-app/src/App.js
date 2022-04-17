@@ -3,6 +3,7 @@ import './App.css';
 import {Home} from './Home';
 import {Employee} from './Employee'
 import {Users} from './Users'
+import {Department} from './Department'
 import {BrowserRouter,Route,Switch,NavLink, Routes} from 'react-router-dom';
 
 
@@ -26,6 +27,11 @@ function App() {
             </NavLink>
           </li>
           <li className="nav-item- m-1">
+            <NavLink className="btn btn-light btn-outline-primary" to="/department">
+              Department
+            </NavLink>
+          </li>
+          <li className="nav-item- m-1">
             <NavLink className="btn btn-light btn-outline-primary" to="/employee">
               Employee
             </NavLink>
@@ -36,6 +42,7 @@ function App() {
       <Routes>
         <Route exact path='/home' element={<Home/>}/>
         <Route exact path='/employee' element={<Employee/>}/>
+        <Route exact path='/department' element={<Department/>}/>
         <Route exact path='/users' element={<Users/>}/>
 
       </Routes>
